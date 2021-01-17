@@ -1,25 +1,56 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import AddTodo from './components/AddTodo';
+import Header from './components/Header';
+import TodoList from './components/TodoList';
+import TodosCount from './components/TodosCount';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor () {
+    super()
+    
+    let appName = 'Simple Todo App';
+    
+    this.state = {
+      todos: [
+        {
+          "userId": 1,
+          "id": 1,
+          "title": "delectus aut autem",
+          "completed": false
+        },
+        {
+          "userId": 1,
+          "id": 2,
+          "title": "quis ut nam facilis et officia qui",
+          "completed": false
+        },
+        {
+            "userId": 1,
+            "id": 3,
+            "title": "felectus aut autem",
+            "completed": false
+        },
+      ]
+    }
+  }
+  
+  render () {
+    return (
+      <div className='page'>
+        <Header />
+        {/* <Header appName={appName} /> */}
+        <main class='todoApp'>
+          <AddTodo />
+          <TodoList todos={this.state.todos}/>
+          <TodosCount todos={this.state.todos.length}/>
+        </main>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
+
+

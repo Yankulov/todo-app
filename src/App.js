@@ -10,7 +10,7 @@ class App extends React.Component {
   constructor () {
     super()
     
-    let appName = 'Simple Todo App';
+    this.appName = 'Simple Todo App';
     
     this.state = {
       todos: [
@@ -39,8 +39,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='page'>
-        <Header />
-        {/* <Header appName={appName} /> */}
+        <Header appName={this.appName} />
         <main className='todoApp'>
           <AddTodo />
           <TodoList todos={this.state.todos}/>

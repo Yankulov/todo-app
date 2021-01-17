@@ -3,7 +3,7 @@ import React from 'react';
 
 function TodosCount (props) {
     return (
-        <div class="total">total items: <span class="output"></span></div>
+        <div className="total">total items: <span className="output">{props.todos}</span></div>
     )
 }
 

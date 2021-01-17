@@ -27,10 +27,10 @@ class App extends React.Component {
           "completed": false
         },
         {
-            "userId": 1,
-            "id": 3,
-            "title": "felectus aut autem",
-            "completed": false
+          "userId": 1,
+          "id": 3,
+          "title": "felectus aut autem",
+          "completed": false
         },
       ]
     }
@@ -41,7 +41,7 @@ class App extends React.Component {
       <div className='page'>
         <Header />
         {/* <Header appName={appName} /> */}
-        <main class='todoApp'>
+        <main className='todoApp'>
           <AddTodo />
           <TodoList todos={this.state.todos}/>
           <TodosCount todos={this.state.todos.length}/>

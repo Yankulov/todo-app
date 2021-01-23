@@ -1,5 +1,5 @@
 .page{
-    height: 100vh;
+    height: 100%;
     background: #333;
     padding-top: 3em;
 }
@@ -11,6 +11,7 @@ header{
 .todoApp{
     width: 80%;
     margin: 3em auto;
+    margin-bottom: 0;
     border: .3em solid #DDD;
     background: #FFF;
 }
